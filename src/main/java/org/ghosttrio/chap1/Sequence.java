@@ -1,7 +1,7 @@
 package org.ghosttrio.chap1;
 
 import net.jcip.annotations.GuardedBy;
-import org.ghosttrio.util.ThreadSafe;
+import net.jcip.annotations.ThreadSafe;
 
 @ThreadSafe
 public class Sequence {
@@ -11,5 +11,9 @@ public class Sequence {
 
     public synchronized int getNext() {
         return value++;
+    }
+
+    public int getValue() {
+        return value;
     }
 }

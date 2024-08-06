@@ -1,6 +1,6 @@
 package org.ghosttrio.chap1;
 
-import org.ghosttrio.util.NotThreadSafe;
+import net.jcip.annotations.NotThreadSafe;
 
 @NotThreadSafe
 public class UnsafeSequence {
@@ -9,5 +9,9 @@ public class UnsafeSequence {
 
     public int getNext() {
         return value++;
+    }
+
+    public int getValue() {
+        return value;
     }
 }
